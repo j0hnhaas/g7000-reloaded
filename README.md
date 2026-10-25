@@ -60,6 +60,11 @@ A public research website and, eventually, an interactive asset explorer will be
 
 The website is under construction. This repository is the primary location for project documentation and code.
 
+
+## ROM Corpus Builder
+
+The [GitHub Pages ROM Explorer](https://j0hnhaas.github.io/g7000-reloaded/) includes a browser-local **Corpus Builder v1** for concatenating user-selected `.bin` files into a reproducible research corpus. It produces a binary blob, a JSON manifest documenting per-ROM boundaries and SHA-256 hashes, and a checksum file. ROM bytes are processed locally and are not uploaded to the repository. See [Corpus documentation](docs/corpus.md) for use, validation requirements, and limitations. The current ROM pattern scanner still handles individual ROM files; manifest-aware corpus scanning is a future development step.
+
 ## Scope and responsible preservation
 
 G7000 Reloaded is an independent, non-commercial research initiative and is not affiliated with Philips, Magnavox, or the original game publishers.
