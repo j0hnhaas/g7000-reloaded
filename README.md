@@ -30,6 +30,19 @@ G7000 cartridges generally store code and data, not ready-made PNG images or aud
 
 We will keep original data, reconstructed assets, speculative candidates, and modern adaptations clearly differentiated. Each confirmed asset should carry provenance information, such as its source ROM, relevant offsets or observed register states, and extraction method.
 
+
+## Provenance and reproducibility
+
+Every extracted or reconstructed element should remain traceable to its source and extraction process. The catalogue will distinguish three layers:
+
+- **Source game / ROM:** verified game title where known, publisher, release details and region when documented, exact ROM filename, byte size, SHA-256 digest, and source reference. Unknown fields remain explicitly unknown rather than inferred from filenames.
+- **Extraction event:** extractor name and version, date, method (static scan, disassembly, emulator observation), parameters, ROM byte offsets when meaningful, relevant raw bytes or hardware register events, and evidence or reproducibility notes.
+- **Asset record:** stable identifier, type (character, sprite candidate, confirmed sprite, composition, animation or sound), representations, gameplay context when observed, confidence/verification status, links to source and extraction records, and rights/attribution notes.
+
+A pattern discovered by interpreting eight arbitrary ROM bytes is **not automatically an authentic sprite**. Catalogue entries should be labelled `candidate`, `observed`, or `verified` according to available evidence. Assets created or modified by this project must be clearly distinguished from original game elements. A hash demonstrates which ROM bytes were analysed; it does not independently establish the ROM's historical authenticity or copyright status.
+
+Initial JSON exports from the browser-based ROM Explorer already include the local filename, SHA-256 digest, ROM offset, raw bytes, bit order, dimensions, and an explicit unverified-candidate classification. The fuller catalogue and historical metadata remain planned work.
+
 ## Planned stages
 
 | Stage | Focus | Status |
