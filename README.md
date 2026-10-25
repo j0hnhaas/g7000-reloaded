@@ -63,7 +63,7 @@ The website is under construction. This repository is the primary location for p
 
 ## ROM Corpus Builder
 
-The [GitHub Pages ROM Explorer](https://j0hnhaas.github.io/g7000-reloaded/) includes a browser-local **Corpus Builder v1** for concatenating user-selected `.bin` files into a reproducible research corpus. It produces a binary blob, a JSON manifest documenting per-ROM boundaries and SHA-256 hashes, and a checksum file. ROM bytes are processed locally and are not uploaded to the repository. See [Corpus documentation](docs/corpus.md) for use, validation requirements, and limitations. The current ROM pattern scanner still handles individual ROM files; manifest-aware corpus scanning is a future development step.
+The [GitHub Pages ROM Explorer](https://j0hnhaas.github.io/g7000-reloaded/) includes a browser-local **Corpus Builder v1** for concatenating user-selected `.bin` files into a reproducible research corpus. It produces a binary blob, a JSON manifest documenting per-ROM boundaries and SHA-256 hashes, and a checksum file. ROM bytes are processed locally and are not uploaded to the repository. See [Corpus documentation](docs/corpus.md) for use, validation requirements, and limitations. The website now offers three separate sections: **Single ROM Explorer**, **Corpus Builder**, and **Corpus Explorer**. The Corpus Explorer loads the generated blob and JSON manifest, validates the overall SHA-256 and each ROM checksum, scans within ROM boundaries only, and exports candidate patterns with source-ROM provenance.
 
 ## Scope and responsible preservation
 
