@@ -31,4 +31,6 @@ function base(){return filename.replace(/[^a-zA-Z0-9_.-]/g,'_')+'_'+selected.toS
 $('file').addEventListener('change',e=>load(e.target.files[0]).catch(err=>$('status').textContent='Error: '+err.message));$('scan').addEventListener('click',scan);$('bits').addEventListener('change',scan);
 $('png').addEventListener('click',()=>{if(selected===null)return;const src=$('preview'),cv=document.createElement('canvas');cv.width=cv.height=128;const ctx=cv.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.drawImage(src,0,0,128,128);cv.toBlob(blob=>{if(blob)save(blob,base()+'.png')},'image/png')});
 $('json').addEventListener('click',()=>{if(selected===null)return;const obj={kind:'unverified-8x8-candidate',source:{filename,sha256:hash},offset:selected,bytes:[...rom.slice(selected,selected+8)],bitOrder:bits(),width:8,height:8};save(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}),base()+'.json')});
-</script><script type="module" src="./corpus-builder.js"></script><script type="module" src="./corpus-explorer.js"></script></body></html>
+</script><script type="module" src="./corpus-builder.js"></script><script type="module" src="./corpus-explorer.js"></script><script data-goatcounter="https://j0hnhaas.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body></html>
